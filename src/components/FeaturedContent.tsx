@@ -2,9 +2,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Play, Eye, Clock, Zap } from "lucide-react";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
+import gallery1 from "@/assets/portrait-2.png";
+import gallery2 from "@/assets/portrait-3.png";
+import gallery3 from "@/assets/portrait-4.png";
+import gallery4 from "@/assets/portrait-5.png";
+import gallery5 from "@/assets/portrait-6.png";
+import gallery6 from "@/assets/portrait-7.png";
+import gallery7 from "@/assets/portrait-8.png";
+import gallery8 from "@/assets/portrait-9.png";
+import gallery9 from "@/assets/portrait-10.png";
 
 const FeaturedContent = () => {
   const featuredItems = [
@@ -53,13 +59,13 @@ const FeaturedContent = () => {
     <section className="py-20 px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground drop-shadow-lg">
             Featured 
             <span className="bg-gradient-to-r from-cosmic-purple to-electric-blue bg-clip-text text-transparent">
               {" "}Content
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
             Discover the most captivating content, curated especially for passionate fans like you.
           </p>
         </div>
@@ -68,7 +74,7 @@ const FeaturedContent = () => {
           {featuredItems.map((item, index) => (
             <Card 
               key={item.id} 
-              className="card-gradient border-primary/20 overflow-hidden group hover:scale-105 transition-all duration-300 glow-effect animate-zoom-in"
+              className="card-gradient border-primary/20 overflow-hidden group hover:scale-105 transition-all duration-300 glow-effect animate-zoom-in bg-card/95 backdrop-blur-sm"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="relative overflow-hidden">
@@ -106,13 +112,13 @@ const FeaturedContent = () => {
                     </div>
                   </div>
                 </div>
-                <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">
+                <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300 text-foreground">
                   {item.title}
                 </CardTitle>
               </CardHeader>
 
               <CardContent>
-                <p className="text-muted-foreground mb-4 line-clamp-3">
+                <p className="text-foreground/70 mb-4 line-clamp-3">
                   {item.description}
                 </p>
                 <Button className="w-full bg-secondary hover:bg-secondary/80 text-secondary-foreground">

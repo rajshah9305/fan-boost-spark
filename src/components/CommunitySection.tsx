@@ -45,13 +45,13 @@ const CommunitySection = () => {
     <section className="py-20 px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground drop-shadow-lg">
             Join the
             <span className="bg-gradient-to-r from-electric-blue to-stellar-gold bg-clip-text text-transparent">
               {" "}Community
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
             Connect with passionate fans worldwide. Share experiences, create memories, and be part of something extraordinary.
           </p>
         </div>
@@ -61,14 +61,14 @@ const CommunitySection = () => {
           {communityStats.map((stat, index) => (
             <Card 
               key={index}
-              className="card-gradient border-primary/20 text-center p-6 group hover:scale-105 transition-all duration-300 glow-effect animate-zoom-in"
+              className="card-gradient border-primary/20 text-center p-6 group hover:scale-105 transition-all duration-300 glow-effect animate-zoom-in bg-card/95 backdrop-blur-sm"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className={`w-12 h-12 bg-${stat.color}/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:animate-pulse-glow`}>
                 <stat.icon className={`w-6 h-6 text-${stat.color}`} />
               </div>
-              <div className="text-2xl md:text-3xl font-bold text-accent mb-2">{stat.value}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
+              <div className="text-2xl md:text-3xl font-bold text-foreground mb-2">{stat.value}</div>
+              <div className="text-sm text-foreground/60">{stat.label}</div>
             </Card>
           ))}
         </div>
@@ -84,7 +84,7 @@ const CommunitySection = () => {
             {featuredPosts.map((post, index) => (
               <Card 
                 key={post.id}
-                className="card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 glow-effect animate-slide-up"
+                className="card-gradient border-primary/20 hover:border-primary/40 transition-all duration-300 glow-effect animate-slide-up bg-card/95 backdrop-blur-sm"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <CardHeader className="pb-3">
@@ -94,8 +94,8 @@ const CommunitySection = () => {
                         <Star className="w-5 h-5 text-primary" />
                       </div>
                       <div>
-                        <CardTitle className="text-sm text-accent">{post.author}</CardTitle>
-                        <p className="text-xs text-muted-foreground">{post.time}</p>
+                        <CardTitle className="text-sm text-foreground">{post.author}</CardTitle>
+                        <p className="text-xs text-foreground/60">{post.time}</p>
                       </div>
                     </div>
                     <Badge variant="outline" className="border-accent text-accent text-xs">
@@ -105,7 +105,7 @@ const CommunitySection = () => {
                 </CardHeader>
                 
                 <CardContent>
-                  <p className="text-sm mb-4 leading-relaxed">{post.content}</p>
+                  <p className="text-sm mb-4 leading-relaxed text-foreground/80">{post.content}</p>
                   
                   <div className="flex items-center justify-between text-xs text-muted-foreground">
                     <div className="flex items-center gap-4">
@@ -129,13 +129,13 @@ const CommunitySection = () => {
         </div>
 
         {/* Join CTA */}
-        <Card className="card-gradient border-primary/20 p-8 text-center glow-effect animate-slide-up" style={{ animationDelay: "0.6s" }}>
+        <Card className="card-gradient border-primary/20 p-8 text-center glow-effect animate-slide-up bg-card/95 backdrop-blur-sm" style={{ animationDelay: "0.6s" }}>
           <div className="mb-6">
             <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse-glow">
               <Users className="w-8 h-8 text-primary" />
             </div>
-            <h3 className="text-2xl font-bold mb-2 text-glow">Ready to Join the Family?</h3>
-            <p className="text-muted-foreground max-w-md mx-auto">
+            <h3 className="text-2xl font-bold mb-2 text-foreground drop-shadow-sm">Ready to Join the Family?</h3>
+            <p className="text-foreground/70 max-w-md mx-auto">
               Become part of our incredible community and unlock exclusive content, early access, and special perks.
             </p>
           </div>

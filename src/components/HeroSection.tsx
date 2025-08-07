@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import heroImage from "@/assets/hero-bg.jpg";
-import profileImage from "@/assets/profile-hero.jpg";
+import profileImage from "@/assets/portrait-1.png";
 import { Star, Heart, Users, Calendar } from "lucide-react";
 
 const HeroSection = () => {
@@ -52,7 +52,7 @@ const HeroSection = () => {
           </div>
 
           {/* Hero text */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-glow">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground drop-shadow-2xl">
             Welcome to the
             <span className="bg-gradient-to-r from-primary via-electric-blue to-stellar-gold bg-clip-text text-transparent">
               {" "}Ultimate Fan{" "}
@@ -60,7 +60,7 @@ const HeroSection = () => {
             Experience
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-foreground/90 mb-8 max-w-3xl mx-auto drop-shadow-lg">
             Discover exclusive content, connect with fellow fans, and dive deep into 
             an extraordinary universe of passion and creativity.
           </p>

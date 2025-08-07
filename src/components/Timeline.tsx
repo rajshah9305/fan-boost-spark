@@ -42,13 +42,13 @@ const Timeline = () => {
     <section className="py-20 px-6 bg-secondary/20">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-glow">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground drop-shadow-lg">
             Epic
             <span className="bg-gradient-to-r from-stellar-gold to-cosmic-purple bg-clip-text text-transparent">
               {" "}Timeline
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
             Follow the incredible journey and witness the moments that shaped this extraordinary story.
           </p>
         </div>
@@ -71,7 +71,7 @@ const Timeline = () => {
 
                 {/* Content card */}
                 <Card 
-                  className={`w-full max-w-md card-gradient border-primary/20 glow-effect hover:scale-105 transition-all duration-300 ${
+                  className={`w-full max-w-md card-gradient border-primary/20 glow-effect hover:scale-105 transition-all duration-300 bg-card/95 backdrop-blur-sm ${
                     index % 2 === 0 ? 'mr-auto pr-8' : 'ml-auto pl-8'
                   }`}
                 >
@@ -81,15 +81,15 @@ const Timeline = () => {
                         <div className={`p-2 rounded-full bg-${event.color}/20`}>
                           <event.icon className={`w-5 h-5 text-${event.color}`} />
                         </div>
-                        <h3 className="text-2xl font-bold text-accent">{event.year}</h3>
+                        <h3 className="text-2xl font-bold text-foreground">{event.year}</h3>
                       </div>
                       <Badge variant="outline" className="border-primary text-primary animate-pulse-glow">
                         {event.badge}
                       </Badge>
                     </div>
                     
-                    <h4 className="text-xl font-semibold mb-3 text-glow">{event.title}</h4>
-                    <p className="text-muted-foreground leading-relaxed">{event.description}</p>
+                    <h4 className="text-xl font-semibold mb-3 text-foreground drop-shadow-sm">{event.title}</h4>
+                    <p className="text-foreground/70 leading-relaxed">{event.description}</p>
                   </CardContent>
                 </Card>
               </div>
@@ -104,9 +104,9 @@ const Timeline = () => {
               <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse-glow">
                 <Zap className="w-6 h-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-accent">2025</h3>
+              <h3 className="text-xl font-bold text-foreground">2025</h3>
             </div>
-            <p className="text-muted-foreground">The next chapter awaits...</p>
+            <p className="text-foreground/70">The next chapter awaits...</p>
             <div className="mt-4 flex justify-center space-x-1">
               {[...Array(3)].map((_, i) => (
                 <div 
